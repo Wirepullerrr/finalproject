@@ -1,20 +1,32 @@
-Package: bst260project
-Title: project code and narrative
+Package: finalproject
+Title: Data Quality and Health Patterns in US Public Health
 Version: 0.0.3
 Authors@R:
-    person(given = "yourfirstname",
-           family = "lastname",
+    person(given = "Zun",
+           family = "Cao",
            role = c("aut", "cre"),
-           email = "youremail@gmail.com",
-           comment = c(ORCID = "0000-0002-1825-0097"))
-Description: provide text on what your project emphasizes and 
-	accomplishes in three or more complete sentences.
+           email = "zuncao@hsph.harvard.edu")
+Description: This package explores public health patterns using
+    NHANES and CDC disease outbreak data. It examines associations
+    between sleep duration and blood pressure, as well as seasonal
+    and regional patterns in waterborne disease outbreaks. It also
+    considers data quality, missing values, and limitations.
 Depends: R (>= 4.5.0)
-Suggests: knitr, testthat, rmarkdown, pkgdown
+Imports:
+    stats,
+    utils
+Suggests:
+    knitr,
+    testthat,
+    rmarkdown,
+    pkgdown,
+    dplyr,
+    ggplot2,
+    NHANES
 License: Artistic-2.0
 VignetteBuilder: quarto
 Encoding: UTF-8
-URL: https://github.com/youreponame
-BugReports: https://github.com/youreponame/issues
+URL: https://github.com/Wirepullerrr/finalproject
+BugReports: https://github.com/Wirepullerrr/finalproject/issues
 Config/roxygen2/version: 8.1.1
 Roxygen: list(markdown=TRUE)
