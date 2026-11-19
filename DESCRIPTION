@@ -20,6 +20,7 @@ Suggests:
     testthat,
     rmarkdown,
     pkgdown,
+    quarto,
     dplyr,
     ggplot2,
     NHANES

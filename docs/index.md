@@ -1,17 +1,47 @@
-# bst260project-template
+# finalproject
 
-Instructions and template for projects for 2026 HSPH BST260
+BST260 Final Project — Fall 2026
 
-Your project will be a working GitHub pages site that presents your
-interpretation of features of public health datasets.
+**Author:** Zun Cao\
+**Institution:** Harvard University
 
-Please see
-[instructions](https://vjcitn.github.io/bst260project-template/articles/instructions.html)
-to set up the infrastructure for your project and to learn about
-available datasets
+## Project Overview
 
-Please see [project suggestion
-text](https://vjcitn.github.io/bst260project-template/articles/stubs.html)
-for some suggestions of how you might proceed with project work on
-selected datasets. More content will be added to this page in the near
-future.
+This project explores health patterns and data quality in two US public
+health datasets.
+
+The analysis focuses on two research questions:
+
+1.  Is sleep duration associated with systolic blood pressure among US
+    adults?
+2.  Are waterborne disease outbreaks during summer associated with
+    higher reported illness counts than outbreaks in other seasons?
+
+## Datasets
+
+### 1. NHANES
+
+The National Health and Nutrition Examination Survey provides
+information on health and lifestyle factors.
+
+We will examine sleep duration, blood pressure, age, gender, and BMI.
+
+### 2. CDC Waterborne Outbreaks
+
+CDC outbreak surveillance data provide information on reported disease
+outbreaks in the United States.
+
+We will explore seasonal and regional differences in waterborne disease
+outbreaks.
+
+## Methods
+
+- Data cleaning and missing data analysis
+- Descriptive statistics
+- Data visualization with ggplot2
+- Regression analysis
+- Discussion of uncertainty and limitations
+
+## Project Website
+
+<https://wirepullerrr.github.io/finalproject/>
