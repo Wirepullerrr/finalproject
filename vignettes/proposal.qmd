@@ -1,0 +1,108 @@
+
+---
+title: "BST260 Final Project Proposal"
+subtitle: "Data Quality and Health Patterns in U.S. Public Health"
+author: "Zun Cao"
+date: "2026-11-18"
+---
+
+**To: BST260 Teaching Team, Fall 2026**
+
+## Introduction
+
+For my BST260 final project, I plan to explore two public health datasets using R. The first analysis will focus on the relationship between sleep duration and blood pressure among US adults. The second will examine seasonal patterns in reported waterborne disease outbreaks.
+
+I am particularly interested in how data quality, missing values, and statistical modeling affect the interpretation of public health data. The project will include two analytical vignettes published through a pkgdown website.
+
+## Study 1: Sleep Duration and Blood Pressure
+
+### Research Question
+
+Is sleep duration associated with systolic blood pressure among US adults aged 20 and older, after accounting for age, gender, and BMI?
+
+### Dataset and Population
+
+I will use data from the National Health and Nutrition Examination Survey (NHANES), accessed through the NHANES R package.
+
+The study population will include adults aged 20 and older with available sleep and blood pressure measurements. The unit of analysis will be an individual participant.
+
+### Variables
+
+- **Exposure:** SleepHrsNight, measured in hours per night. I will first treat sleep duration as a continuous variable and may also examine categories of short, typical, and long sleep.
+- **Outcome:** BPSysAve, average systolic blood pressure in mmHg, treated as a continuous variable.
+- **Potential confounders:** Age and gender. I will also examine the role of BMI in adjusted models.
+
+I will examine missing values and exclude participants with missing measurements from the primary complete-case analysis. I may compare the characteristics of included and excluded participants to assess potential selection bias.
+
+### Analysis Plan
+
+I will first calculate descriptive statistics, including means, medians, standard deviations, and missing-value proportions.
+
+I will use scatterplots and boxplots to visualize the relationship between sleep duration and blood pressure.
+
+Next, I will fit linear regression models to estimate the association between sleep duration and systolic blood pressure. I will compare unadjusted and adjusted models and examine whether nonlinear patterns are present.
+
+I will interpret the results as observational associations rather than causal effects.
+
+## Study 2: Seasonal Patterns in Waterborne Disease Outbreaks
+
+### Research Question
+
+Are waterborne disease outbreaks occurring during summer associated with higher reported illness counts per outbreak than outbreaks in other seasons in the United States?
+
+### Dataset and Population
+
+I will use CDC outbreak surveillance data provided in the finalproject package as the waterborne dataset.
+
+The dataset includes reported foodborne and waterborne illness events. I will examine the available classification fields and restrict the analysis to waterborne outbreaks.
+
+The unit of analysis will be a reported outbreak.
+
+### Variables
+
+- **Exposure:** Season, derived from the recorded outbreak month. Summer will be defined as June through August.
+- **Outcome:** Number of reported illnesses associated with each outbreak, treated as a count variable.
+- **Other variables:** Year, state, geographic region, and outbreak characteristics, depending on data availability.
+
+I will inspect missing dates, illness counts, and location information. Outbreaks with unknown months will be excluded from season-specific comparisons but included in the missing-data summary.
+
+### Analysis Plan
+
+First, I will examine the structure of the dataset and convert relevant information into a tidy format.
+
+I will then summarize the number of reported outbreaks and illness counts by month, season, and geographic region.
+
+I will use line charts, bar charts, and boxplots to illustrate seasonal and regional patterns.
+
+If the data support it, I will use a count regression model to explore differences in illnesses per outbreak across seasons, considering calendar year and geographic region.
+
+I will distinguish between the number of reported outbreaks and the number of illnesses within each outbreak.
+
+## Data Quality and Reproducibility
+
+Both studies will include an assessment of missing values, variable definitions, and data limitations.
+
+I will document the original data sources, relevant survey or surveillance periods, and major cleaning decisions.
+
+The analyses will be implemented in R using packages such as dplyr and ggplot2. The code and results will be documented in reproducible Quarto vignettes.
+
+## Planned Vignettes
+
+I plan to create two analytical vignettes:
+
+1. **NHANES Analysis:** Sleep duration and systolic blood pressure among US adults.
+2. **CDC Waterborne Analysis:** Seasonal and regional patterns of waterborne disease outbreaks.
+
+Each vignette will include an introduction, data provenance, descriptive statistics, analysis methods, findings, and limitations.
+
+## Expected Limitations
+
+The NHANES analysis may be affected by self-reported sleep duration, missing data, residual confounding, and the complex survey sampling design.
+
+The CDC outbreak analysis may be affected by incomplete reporting, missing outbreak information, and changes in surveillance practices over time. Reported outbreak counts do not necessarily represent the true incidence of waterborne disease.
+
+Neither study will establish causal relationships.
+
+## Project Goal
+
+My goal is to produce a reproducible R package and pkgdown website that demonstrates how data cleaning, visualization, and statistical modeling can be used to investigate public health questions while clearly communicating uncertainty and limitations.
