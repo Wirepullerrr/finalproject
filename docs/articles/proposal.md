@@ -154,3 +154,10 @@ My goal is to produce a reproducible R package and pkgdown website that
 demonstrates how data cleaning, visualization, and statistical modeling
 can be used to investigate public health questions while clearly
 communicating uncertainty and limitations.
+
+## AI Usage Disclosure
+
+I used OpenAI ChatGPT (GPT-6) to brainstorm research questions. My
+prompt included: “Recommend a feasible BST260 project using two
+course-approved datasets that fits my background and meets the
+requirements.”
